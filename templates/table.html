@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Таблица клиентов
+{% endblock  %}
+
+
+{% block body %}
+<h1>Таблица Клиентов</h1>
+<a href="create">Добавить запись</a>
+
+<div class="table-responsive  ">
+    
+    <table class="table table-bordered table-condensed table-hover form-control ">
+        <thead>
+            <tr>
+              <th scope="col row">Номер счета</th>
+              <th scope="col">Фаимилия</th>
+              <th scope="col">Имя</th>
+              <th scope="col">Отчество</th>
+              <th scope="col">Дата рождения</th>
+              <th scope="col">ИНН</th>
+              <th scope="col">ФИО ответственного</th>
+              <th scope="col">Статус</th>
+            </tr>
+          </thead>
+        <tbody>
+        {% for tabl in table %}
+          <tr>
+            <th scope="col row">{{tabl.id}}</th>
+            <td>{{ tabl.family}}</td>
+            <td>{{ tabl.name}}</td>
+            <td>{{ tabl.middle_name}}</td>
+            <td>{{ tabl.data}}</td>
+            <td>{{ tabl.inn}}</td>
+            <td>{{ tabl.responsible}}</td>
+            <td>{{ tabl.status}}</td>
+            
+          </tr>
+        {% endfor %}
+        </tbody>
+    </table>    
+    
+{% endblock body %}
+
+
+
+
+

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Авторизация
+{% endblock  %}
+
+
+
+
+
+
+{% block body %}
+<h1>Авторизация</h1>
+
+<form>
+    <div class="form-group row">
+      <label for="login">Введите логин</label>
+      <input type="text" name = "loggin" class="form-control" >
+      
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Введите пароль</label>
+      <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+{% endblock body %}  

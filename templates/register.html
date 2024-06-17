@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<h1>Регистрация</h1>
+
+
+<form method="post" class="parent">
+    <label >Введите ФИО</label>
+    <input type="text" name="fio"  class="form-control">
+    <label >Введите логин</label>
+    <input type="text" name="loggin" class="form-control">
+    <label for="login">Введите пароль</label>
+    <input type="text" name="password"  class="form-control">
+    <label for="login">Подтвердите пароль</label>
+    <input type="text" name="repassword"  class="form-control">
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+  
+
+{% endblock body %}     
